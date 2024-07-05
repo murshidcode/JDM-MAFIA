@@ -170,50 +170,61 @@
 
 
 
-        <form class="row container-fluid g-3 text-white mt-3">
+        <form name="singup" onsubmit="validate(); return false" class="row container-fluid g-3 text-white mt-3">
           <div class="col-12 my-4">
             <h2 class="text-uppercase fs-2 text-primary text-center">sing up</h2>
           </div>
           <div class="col-md-6 ">
-            <label for="inputEmail4" class="form-label">First Name</label>
-            <input type="text" class="form-control bg-black text-light" id="inputEmail4">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control bg-black text-light" id="u_name">
+            <small class="text-danger" id="name-validation"></small>
           </div>
           <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Last Name</label>
-            <input type="text" class="form-control bg-black text-light" id="inputPassword4">
-          </div>
-
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control bg-black text-light" id="inputEmail4">
+            <label for="username" class="form-label">User Name</label>
+            <input type="text" class="form-control bg-black text-light" id="u_username">
+            <small class="text-danger" id="username-validation"></small>
           </div>
 
           <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Phone Number</label>
-            <input type="number" class="form-control bg-black text-light" id="inputPassword4">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control bg-black text-light" id="u_email">
+            <small class="text-danger" id="email-validation"></small>
           </div>
 
           <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Password</label>
-            <input type="password" class="form-control bg-black text-light" id="inputPassword4">
+            <label for="number" class="form-label">Phone Number</label>
+            <input type="number" class="form-control bg-black text-light" id="u_number">
+            <small class="text-danger" id="number-validation"></small>
+          </div>
+
+          <div class="col-md-6">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control bg-black text-light" id="u_password">
+            <small class="text-danger" id="password-validation"></small>
           </div>
             
           <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Conform Password</label>
-            <input type="password" class="form-control bg-black text-light" id="inputPassword4">
+            <label for="country" class="form-label">Country </label>
+            <input type="text" class="form-control bg-black text-light" id="u_country">
+            <small class="text-danger" id="country-validation"></small>
           </div>
 
-          <div class="col-12 ">
-            <label for="inputAddress2" class="form-label">Enter a Keyword</label>
-            <input type="text" class="form-control bg-black text-light" id="inputAddress2" placeholder="your birth day / birth place / favorite food">
+
+          <div class="col-md-12">
+            <label for="keyword" class="form-label">Keyword </label>
+            <input type="text" class="form-control bg-black text-light" id="u_keyword">
+            <small class="text-danger" id="keyword-validation"></small>
           </div>
+
+      
           
           <div class="col-12 text-center mb-5">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary " name="u_singup" ondblclick="showAlert();return true" >Submit</button>
           </div>
         </form>
 
 
+        
         
         <div class="card text-white bg-black mx-5 pt-5">
           <div class="card-body">
@@ -223,6 +234,8 @@
          </div>
         </div>
          
+
+        
       
          
         <div class="card-group ">
@@ -261,19 +274,19 @@
      
 
 
-        <div class="card-group ">
-          <div class="card text-white bg-black">
-            <div class="card-body">
+        <div class="container-fluid ">
+          <div class="col-12 text-white bg-black ">
+            <div class="card-body ">
               <h5 class="card-title">Contact Us</h5>
-              <p class="card-text">
+              <p class="card-text pt-3">
                 Got a question or want to share your JDM story? Contact us at info@jdmdetails.com
               </p>
               </div>
           </div>
-          <div class="card text-white bg-black">
+          <div class="col-12 text-white bg-black mt-5 ">
             <div class="card-body">
               <h5 class="card-title">Privacy Policy</h5>
-              <p class="card-text">
+              <p class="card-text pt-3">
                 Read about how we protect your privacy and handle your data.</p>
                 </p>
               </div>
@@ -296,6 +309,7 @@
         
         
         
+          
         
         
       
@@ -311,7 +325,7 @@
 
 
 
-
+     <script src="jdmmafia.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
